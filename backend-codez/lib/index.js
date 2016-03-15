@@ -7,7 +7,7 @@ module.exports = {
 
 function create(config) {
   var server = restify.createServer({
-    name: 'offer_api'
+    name: 'lunch-backend'
   })
   server.use(restify.authorizationParser())
   server.use(restify.queryParser())
