@@ -10,6 +10,16 @@ describe('Lunch API', function() {
   before(function(done) {
     server.listen(config.port, done)
   })
+  beforeEach(function(done){
+    request.get({
+      url: config.public_host + ':' + config.port + '/reset',
+      json: true
+    }, function(err, res, body) {
+      if (err) return done(err)
+      assert.equal(res.statusCode, 200)
+      done()
+    })
+  })
   it('should get / route', function(done) {
     request.get({
       url: config.public_host + ':' + config.port + '/',
@@ -57,7 +67,7 @@ describe('Lunch API', function() {
           json: true
         }, function(err, res, body) {
           if (err) return done(err)
-          assert.deepEqual(res.body, {lunches: ["apples", "pie", "burgers"]})
+          assert.deepEqual(res.body, {lunches: ["pie", "burgers"]})
           done()
         })
       })

@@ -50,6 +50,12 @@ function create(config) {
 
 
   const lunchStore = []
+  server.get('/reset', reset)
+  function reset(req, res, next){
+    lunchStore.length = 0
+    res.send(200)
+  }
+
 
   server.post('/lunches', postLunch)
 
