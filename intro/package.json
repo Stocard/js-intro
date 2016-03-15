@@ -9,6 +9,7 @@
   "author": "Lukas Stehr",
   "license": "ISC",
   "dependencies": {
+    "async": "^1.5.2",
     "lodash": "^4.6.1"
   }
 }

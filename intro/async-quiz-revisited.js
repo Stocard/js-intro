@@ -2,13 +2,8 @@
 
 const async = require('async');
 
-// Functions
-function callAfterOneSecond(callback) { /* does what the name says */ }
-function callAfterTwoSeconds(callback) { /* does what the name says */ }
-function callAfterThreeSeconds(callback) { /* does what the name says */ }
-function callAfterFourSeconds(callback) { /* does what the name says */ }
-
 // Script
+
 console.log('1');
 callAfterTwoSeconds(() => {
     console.log('2');
@@ -38,3 +33,21 @@ async.parallel([
     console.log('9');
 });
 console.log('10');
+
+// Functions
+
+function callAfterOneSecond(callback) {
+    setTimeout(callback, 1000);
+}
+
+function callAfterTwoSeconds(callback) {
+    setTimeout(callback, 2000);
+}
+
+function callAfterThreeSeconds(callback) {
+    setTimeout(callback, 3000);
+}
+
+function callAfterFourSeconds(callback) {
+    setTimeout(callback, 4000);
+}
