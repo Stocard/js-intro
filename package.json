@@ -1,0 +1,14 @@
+{
+  "name": "jsintro",
+  "version": "0.0.1",
+  "description": "Introduction to Server-Side JavaScript with Node and ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukas Stehr",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.6.1"
+  }
+}
