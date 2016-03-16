@@ -6,7 +6,13 @@ const async = require('async');
 
 console.log('1');
 callAfterTwoSeconds(() => {
-    console.log('2');
+    console.log('2a');
+});
+callAfterTwoSeconds(() => {
+    console.log('2b');
+});
+callAfterTwoSeconds(() => {
+    console.log('2c');
 });
 console.log('3');
 callAfterOneSecond(() => {
